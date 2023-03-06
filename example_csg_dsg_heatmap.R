@@ -1,5 +1,5 @@
 
-source('/Users/saurabhbhardwaj/Desktop/CONTI/csg_heatmap.R')
+source('csg_heatmap.R')
 library(heatmaply)
 
 # Load the CSV data file located at the specified directory
