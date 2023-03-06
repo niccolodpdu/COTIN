@@ -4,7 +4,7 @@ library(heatmaply)
 
 # Load the CSV data file located at the specified directory
 
-df_data_org <- read.csv("/Users/saurabhbhardwaj/Desktop/CONTI/sample_data.csv", header = TRUE)
+df_data_org <- read.csv("sample_data.csv", header = TRUE)
 
 # The 'select_top_genes' function provides the top quality features as per the chosen reference value
 # Inputs:
@@ -20,7 +20,7 @@ df_data_org <- read.csv("/Users/saurabhbhardwaj/Desktop/CONTI/sample_data.csv", 
 cos_matrix_sort_label_u <- select_top_genes(df_data_org, k = list(4,3,3), ref = c(1, 0, 0), num_genes = 12)
 
 # # path for reordering of samples
-metadata_path_arranged <- read.csv("/Users/saurabhbhardwaj/Desktop/CONTI/sample_order.csv", header = TRUE)
+metadata_path_arranged <- read.csv("sample_order.csv", header = TRUE)
 # Assign cosine matrix sorted by label to tot_sg variable
 tot_sg <- cos_matrix_sort_label_u
 data_tmm_path_arranged <- df_data_org[,colnames(metadata_path_arranged)]
